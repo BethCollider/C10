@@ -1,0 +1,32 @@
+Declara la variable de ground en las primeras lineas de codigo
+
+var ground;
+
+Declara en la function setup(){} el sprite de ground ("suelo")
+
+ground = createSprite (200,180, 400, 20);
+
+Cambiar en function draw(){} los objetos en colicion
+
+trex.collide(ground);
+
+Declarar velocidad al objeto ground en function draw (){}
+
+ground.velocityX = - 1;
+console.log(ground.x);
+
+Agregar imagen del ground.png declarar variable que almacena en las primeras lineas
+
+var groundImg;
+
+Cargar imagen de ground en function preload (){}
+groundImg = loadImage ("ground2.png");
+
+Agregar imagen al objeto ground en function setup(){}
+ground.addImage ("suelo", groundImg);
+
+Agregar el cliclo de repeticion del ground ("suelo") en la function draw (){}
+
+if ( ground.x < 0 ) {
+ground.x = ground.width/2;
+}
